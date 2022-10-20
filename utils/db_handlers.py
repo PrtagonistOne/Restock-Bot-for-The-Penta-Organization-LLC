@@ -5,6 +5,7 @@ from config.loggers import get_core_logger
 
 import uuid
 
+from utils.home_depot_handlers import get_hd_shipment_status
 
 init_logging()
 logger = get_core_logger()
@@ -15,23 +16,37 @@ def add_to_catalog(update, context):
     context.bot.send_message(chat_id=update.message.chat_id, text="Adding a product..")
 
     strings = update.message.text.lower().split()
+    table_entry_data = []
+    logger.info(f'Message info: {strings}')
 
-    if len(strings) == 2:
+    if len(strings) == 4:
         strings.remove('/add_to_catalog')
+
+        if strings[2] == 'hd':
+            table_entry_data = get_hd_shipment_status(strings[0], strings[1])
+
+        logger.info(f'Message info: {strings}')
+
+        ret_name = table_entry_data[0]
+        prod_name = table_entry_data[1]
+        location = table_entry_data[2]
+        in_stock = table_entry_data[3]
+        shipping = table_entry_data[4]
         logger.info(f'Message info: {strings}')
         # Connecting to the SQL database
         conn = sqlite3.connect('list.db')
         c = conn.cursor()
 
         c.execute('''CREATE TABLE IF NOT EXISTS Catalog
-                      (Retailer_name TEXT, Product_name TEXT, Stock_status BOOLEAN, Location TEXT, Unique_Id TEXT)''')
+                      (Retailer_name TEXT, Product_name TEXT, Location TEXT, Stock_status TEXT,
+                      Shipping_details TEXT, Unique_Id TEXT)''')
 
         conn.commit()
 
         unique_id = str(uuid.uuid4())
 
-        c.execute("INSERT INTO Catalog VALUES(?,?,?,?,?)", ('Walmart', 'Lenovo Laptop', True, 3051,
-                                                            unique_id.replace('-', '')))
+        c.execute("INSERT INTO Catalog VALUES(?,?,?,?,?,?)", (ret_name, strings[0], location, in_stock, shipping,
+                                                              unique_id.replace('-', '')))
 
         conn.commit()
         conn.close()
@@ -73,9 +88,9 @@ def show_list(update, context):
     if len(rows) > 0:
         logger.info(rows)
         for row in rows:
-            update.message.reply_text(f"RETAILER - {row[0]},\nPRDUCT - {row[1]}\n"
-                                      f"STOCK STATUS - {bool(row[2])},\nLOCATION - {row[3]}\n"
-                                      f"ID - {row[4]}")
+            update.message.reply_text(f"RETAILER - {row[0]},\nPRODUCT - {row[1]}\n"
+                                      f"LOCATION - {row[2]},\nSTOCK - {row[3]}\n"
+                                      f"Type of Shipping - {row[4]},\n ID - {row[5]}")
     else:
         update.message.reply_text("No items in the catalog.")
 
