@@ -23,10 +23,10 @@ def start(update: Update, context: CallbackContext):
 
 def help(update: Update, context: CallbackContext):
     update.message.reply_text("\n📝 Catalog 📝\n"
-                              "/add_to_catalog <link>, <address>: to add products to the catalog\n"
+                              "/add_HD_to_catalog <link>, <address>: to add HOME DEPOT product to the catalog\n"
                               "/catalog - to see all products.\n"
                               "/remove_from_catalog <product ID>: to remove a product from the catalog\n"
-                              "/clear_list - to reset the catalog\n")
+                              "/clear_list !!! - Clears all catalog (include !!! to confirm the command)\n")
 
 
 def unknown_text(update: Update, context: CallbackContext):
@@ -56,7 +56,9 @@ if __name__ == '__main__':
     dp.add_handler(CommandHandler('help', help))
 
     # SQL Reminders (list.db)
-    dp.add_handler(CommandHandler('add_to_catalog', db_handlers.add_to_catalog))
+    dp.add_handler(CommandHandler('add_HD_to_catalog', db_handlers.add_HD_to_catalog))
+
+    # Catalog LIST, REMOVE ALL and REMOVE ONE
     dp.add_handler(CommandHandler('catalog', db_handlers.show_list))
     dp.add_handler(CommandHandler('clear_list', db_handlers.clear_list))
     dp.add_handler(CommandHandler('remove_from_catalog', db_handlers.remove_from_list))

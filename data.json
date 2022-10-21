@@ -1,1591 +1,183 @@
 {
-   "productDetails":{
-      "1001181690":{
-         "product":{
-            "omniItemId":"1001181690",
-            "brand":"EcoSurvivor",
-            "brandId":"5456",
-            "barcode":"030878436823",
-            "barcodes":[
-               {
-                  "code":"30030878436824",
-                  "qty":"3"
-               },
-               {
-                  "code":"40030878436821",
-                  "qty":"3"
-               },
-               {
-                  "code":"030878436823",
-                  "qty":"1"
-               }
-            ],
-            "categories":{
-               "107468":"HEADPHONES"
-            },
-            "createdDate":"2021-08-06T23:38:49.864Z",
-            "description":"Earbud Wired Headphones",
-            "energyStar":false,
-            "endDate":"9999-12-31T05:00:00.000Z",
-            "epc":{
-               "spinSet":"",
-               "additionalImages":[
-                  {
-                     "lg":null,
-                     "sm":null,
-                     "xl":null,
-                     "seq":102,
-                     "src":"Vendor Provided",
-                     "baseUrl":"https://mobileimages.lowes.com/productimages/33b0d4d8-4c9a-48f2-9d12-b2b45404d6fd/11736711.jpg"
-                  },
-                  {
-                     "lg":null,
-                     "sm":null,
-                     "xl":null,
-                     "seq":104,
-                     "src":"Vendor Provided",
-                     "baseUrl":"https://mobileimages.lowes.com/productimages/94a0e67c-035b-443b-8b42-db107de356f1/11736713.jpg"
-                  },
-                  {
-                     "lg":null,
-                     "sm":null,
-                     "xl":null,
-                     "seq":105,
-                     "src":"Vendor Provided",
-                     "baseUrl":"https://mobileimages.lowes.com/productimages/5a6bdfdd-ee3a-41a8-abeb-ce9bf359a13d/44274522.jpg"
-                  }
-               ],
-               "videoSets":[
-                  "030878436823_video_04-AVS"
-               ],
-               "swatchImgs":[
+   "serviceStatus":"SUCCESS",
+   "errorMessages":[
 
-               ],
-               "imageSpins":[
-
-               ],
-               "spinSets":[
-
-               ],
-               "videos":[
-                  "030878436823_video_04"
-               ],
-               "videoStreams":[
-                  {
-                     "view":"Product Marketing Video",
-                     "url":"https://cdnapisec.kaltura.com/p/4215793/sp/421579300/playManifest/entryId/1_p7uebgxt/format/applehttp/protocol/https"
-                  }
-               ]
-            },
-            "imageName":"030878436823",
-            "imageUrls":[
-               {
-                  "key":"baseUrl",
-                  "value":"/productimages/94dba92f-e8b2-42a3-b0a3-f3c4f7c0fcf4/11736718.jpg"
-               }
-            ],
-            "interpackDesc":"EACH",
-            "interPackQty":1,
-            "interpackCode":"EA",
-            "isPublished":"Y",
-            "isBuyable":"Y",
-            "itemNumber":"877343",
-            "productStatus":true,
-            "hazmatCode":"N",
-            "inventoryBuffer":1,
-            "installAvailInd":false,
-            "language":-1,
-            "lastModifiedDate":"2022-10-15T07:40:31.032Z",
-            "lastModifiedBy":"ProductDataSVC -  ItemMaster Consumer",
-            "leadCapture":false,
-            "lowesExclusive":false,
-            "lcomIndicator":"Y",
-            "marketingBullets":[
-               {
-                  "key":"1",
-                  "value":"Waterproof &#8211; these ear buds are waterproof, allowing you take your music virtually anywhere &#8211; even swimming"
-               },
-               {
-                  "key":"2",
-                  "value":"Perfect fit &#8211; 3 sizes of silicone cushions offer the best fit while reducing the ambient noise for optimal listening"
-               },
-               {
-                  "key":"3",
-                  "value":"Compatibility &#8211; pair with your smartphone, tablet, or other blue tooth enabled device for convenient access while you&#8217;re on the go; works with sir and Google assistant"
-               },
-               {
-                  "key":"4",
-                  "value":"Give back &#8211; 50% of EcoSurvivor&#8217;s net proceeds are given to the 5013 charity, water4, to aid in their goal of eliminating the global water crisis"
-               }
-            ],
-            "maxPurQty":0,
-            "modelId":"43682-TS1",
-            "orderItemMulQty":0,
-            "orderItemMinQty":0,
-            "pdURL":"/pd/EcoSurvivor-Earbud-Headphones/1001181690",
-            "productTypeCode":11,
-            "rating":"4.5714",
-            "reviewCount":"21",
-            "romanceCopy":"Adventure is loud and clear with EcoSurvivor wireless ear buds. Simply pair the ear buds to your smartphone, tablet or other blue tooth-enabled device for convenient access to your favorite play lists while you&#8217;re on the go. An IPX7 rating means your ear buds are waterproof and allows you take your music virtually anywhere &#8211; even swimming. The durable cable is the perfect length and includes an adjustable cinch for unrestricted movement to support your active life. Enjoy the secure, comfortable feel of the flexible ear loop as you move, as well as three sizes of silicone cushions to offer the best fit while reducing ambient noise for high-intensity listening. A built-in rechargeable battery provides up to eight hours of playtime, and the in-bud controller/Mic easily operates your music, takes calls or activates your phone&#8217;s digital assistant, even during extreme conditions. A pouch is included to conveniently store and transport your ear buds when you&#8217;re on the move. When the journey is tough, get tougher with EcoSurvivor blue tooth ear buds. When you buy EcoSurvivor products, you&#8217;re making a difference. EcoSurvivor donates 50% of its net proceeds to water4, a 501(c)3 charity that is committed to providing at-risk, indigenous people access to clean water. Your EcoSurvivor purchase helps their mission of eliminating the world water crisis that impacts nearly 1 billion people and causes over 3 million preventable deaths each year.",
-            "rollupIndicator":false,
-            "status":"ACTIVE",
-            "startDate":"2019-08-20T05:00:00.000Z",
-            "sellingRestriction":false,
-            "sosFreightType":"Pre-Paid",
-            "specs":[
-               {
-                  "key":"Wireless",
-                  "value":"No",
-                  "seq":1
-               },
-               {
-                  "key":"Noise Canceling",
-                  "value":"No",
-                  "seq":2
-               },
-               {
-                  "key":"Headphone Type",
-                  "value":"Earbud",
-                  "seq":3
-               },
-               {
-                  "key":"Speaker Diameter (Millimeters)",
-                  "value":"0",
-                  "seq":4
-               },
-               {
-                  "key":"UNSPSC",
-                  "value":"52161500",
-                  "seq":5
-               },
-               {
-                  "key":"Case Included",
-                  "value":"No",
-                  "seq":6
-               },
-               {
-                  "key":"Cable Length (Inches)",
-                  "value":"1.55",
-                  "seq":7
-               },
-               {
-                  "key":"CA Residents: Prop 65 Warning(s)",
-                  "value":"No",
-                  "seq":8
-               },
-               {
-                  "key":"Plug Type",
-                  "value":"3.5mm nickel",
-                  "seq":9
-               },
-               {
-                  "key":"Microphone Included",
-                  "value":"No",
-                  "seq":10
-               },
-               {
-                  "key":"Manufacturer Color/Finish",
-                  "value":"Orange",
-                  "seq":11
-               },
-               {
-                  "key":"Color/Finish Family",
-                  "value":"Orange",
-                  "seq":12
-               },
-               {
-                  "key":"Warranty",
-                  "value":"None",
-                  "seq":13
-               }
-            ],
-            "type":"ANY",
-            "vendorNumber":"1353",
-            "vendorDirect":"1",
-            "vendorLeadTime":0,
-            "weight":"0.13",
-            "legacyDescription":"ECO BLUETOOTH EAR BUDS",
-            "itemCubeMeasure":"0.0169",
-            "itemHeightMeasure":"7.77",
-            "itemDepthMeasure":"1.22",
-            "itemWidthMeasure":"3.08",
-            "itemWeightMeasure":"0.13",
-            "ltlIndicator":"N",
-            "similarItemIndicator":true,
-            "productVisualizer":false,
-            "merchandisingHierarchy":{
-               "assortment":"20182",
-               "assortmentDescription":"HEADPHONES",
-               "productGroup":"510626",
-               "productGroupDescription":"MULTIMEDIA & ACCESSORIES",
-               "subDivision":"204",
-               "subDivisionDescription":"MULTIMEDIA, NETWORKING & MOBILE",
-               "division":"25",
-               "divisionDescription":"ELECTRICAL",
-               "businessArea":"4",
-               "businessAreaDescription":"BUILDING PRODUCTS"
-            },
-            "epcItems":"image",
-            "title":"EcoSurvivor Earbud Wired Headphones",
-            "isArchived":false,
-            "isGiftCard":false,
-            "isNotAvailable":false,
-            "isCDPNotAvailable":false,
-            "isSOS":false,
-            "isOOS":false,
-            "showATC":true,
-            "zippedInExperience":"2383",
-            "productImages":{
-               "isNLP":false
-            },
-            "isExclusive":false,
-            "isRestriction":false,
-            "restrictionDetails":{
-
-            },
-            "isBasePaint":false,
-            "isConfigurablePaintProduct":false
+   ],
+   "data":{
+      "georegion":"272",
+      "country_code":"US",
+      "currency_code":"USD",
+      "region_code":"NJ",
+      "city":"EDISON",
+      "dma":"501",
+      "pmsa":"5015",
+      "msa":"5602",
+      "areacode":"732",
+      "county":"MIDDLESEX",
+      "fips":"34023",
+      "lat":"40.5175",
+      "longt":"-74.3955",
+      "timezone":"EST",
+      "zip":"08817-08818+08820+08837+08899",
+      "continent":"NA",
+      "throughput":"vhigh",
+      "bw":"5000",
+      "network":null,
+      "asnum":"35913",
+      "location_id":"0",
+      "trueClientIp":"45.15.176.37",
+      "store":{
+         "storeId":"316",
+         "storeUrl":null,
+         "storeType":10,
+         "commonName":"North Brunswick",
+         "address":"871 Route 1 South",
+         "city":"North Brunswick",
+         "province":null,
+         "provinceName":null,
+         "state":"NJ",
+         "stateName":null,
+         "postalCode":"08902",
+         "phone":"(732) 296-0291",
+         "weekdayTimings":null,
+         "saturdayTimings":null,
+         "sundayTimings":null,
+         "otherTimings1":null,
+         "otherTimings2":null,
+         "specialMsg":null,
+         "longitude":"-74.4588825",
+         "latitude":"40.4629309",
+         "latlongSrc":null,
+         "hiringInd":"N",
+         "facadeStoreType":"10",
+         "operatingHoursDetails":null,
+         "contacFlag":null,
+         "curbSideFlag":"1",
+         "countryCode":"USA",
+         "specialityCodes":{
+            "0":null
          },
-         "location":{
-            "zipcode":"06416",
-            "storeNumber":"2383",
-            "eligibleToPurchase":false,
-            "price":{
-               "type":"STORE",
-               "displayText":"STORE",
-               "pricingDataList":[
-                  {
-                     "usageType":"SELLING",
-                     "displayType":"REGULAR",
-                     "priceType":1,
-                     "basePrice":36.98,
-                     "finalPrice":36.98,
-                     "retailPrice":36.98,
-                     "dotd":false
-                  }
-               ]
-            },
-            "itemInventory":{
-               "lctNbr":2383,
-               "itemNbr":877343,
-               "modID":"43682-TS1",
-               "omniID":"1001181690",
-               "vbuNbr":1353,
-               "itmTypCode":1,
-               "reqQty":1,
-               "itemAvailList":[
-                  {
-                     "fullMtdTyp":1,
-                     "fullMtdMsg":"Parcel",
-                     "fullLctNbr":2383,
-                     "isAvlSts":false,
-                     "totalQty":0,
-                     "onhandQty":0,
-                     "itmLdTmAvlQty":0,
-                     "itmLdTm":"",
-                     "itmLdTmDays":0,
-                     "timeToCutOff":"0",
-                     "maxAvailQty":0
-                  },
-                  {
-                     "fullMtdTyp":2,
-                     "fullMtdMsg":"Pickup",
-                     "fullLctNbr":2383,
-                     "isAvlSts":true,
-                     "totalQty":2,
-                     "onhandQty":2,
-                     "itmLdTm":"10-20-2022-04:00 UTC",
-                     "itmLdTmDays":0,
-                     "fullPath":[
-                        {
-                           "pathSequence":1,
-                           "pathLctNbr":2383,
-                           "pathLctType":"store",
-                           "pathLctCompany":"lowes",
-                           "availabilityDate":"10-20-2022-04:00 UTC",
-                           "sourcedQty":1,
-                           "isATP":false
-                        }
-                     ],
-                     "nearestStores":[
-                        {
-                           "lctNbr":650,
-                           "distance":9,
-                           "isAvlSts":true,
-                           "onhandQty":1,
-                           "totalQty":1,
-                           "itmLdTm":"10-20-2022-04:00 UTC",
-                           "itmLdTmDays":0,
-                           "fullPath":[
-                              {
-                                 "pathSequence":1,
-                                 "pathLctNbr":650,
-                                 "pathLctType":"store",
-                                 "pathLctCompany":"lowes",
-                                 "availabilityDate":"10-20-2022-04:00 UTC",
-                                 "sourcedQty":1,
-                                 "isATP":false
-                              }
-                           ]
-                        },
-                        {
-                           "lctNbr":2288,
-                           "distance":9.3,
-                           "isAvlSts":true,
-                           "onhandQty":1,
-                           "totalQty":1,
-                           "itmLdTm":"10-20-2022-04:00 UTC",
-                           "itmLdTmDays":0,
-                           "fullPath":[
-                              {
-                                 "pathSequence":1,
-                                 "pathLctNbr":2288,
-                                 "pathLctType":"store",
-                                 "pathLctCompany":"lowes",
-                                 "availabilityDate":"10-20-2022-04:00 UTC",
-                                 "sourcedQty":1,
-                                 "isATP":false
-                              }
-                           ]
-                        },
-                        {
-                           "lctNbr":2910,
-                           "distance":10.7,
-                           "isAvlSts":true,
-                           "onhandQty":2,
-                           "totalQty":2,
-                           "itmLdTm":"10-20-2022-04:00 UTC",
-                           "itmLdTmDays":0,
-                           "fullPath":[
-                              {
-                                 "pathSequence":1,
-                                 "pathLctNbr":2910,
-                                 "pathLctType":"store",
-                                 "pathLctCompany":"lowes",
-                                 "availabilityDate":"10-20-2022-04:00 UTC",
-                                 "sourcedQty":1,
-                                 "isATP":false
-                              }
-                           ]
-                        },
-                        {
-                           "lctNbr":1665,
-                           "distance":14.6,
-                           "isAvlSts":true,
-                           "onhandQty":2,
-                           "totalQty":2,
-                           "itmLdTm":"10-20-2022-04:00 UTC",
-                           "itmLdTmDays":0,
-                           "fullPath":[
-                              {
-                                 "pathSequence":1,
-                                 "pathLctNbr":1665,
-                                 "pathLctType":"store",
-                                 "pathLctCompany":"lowes",
-                                 "availabilityDate":"10-20-2022-04:00 UTC",
-                                 "sourcedQty":1,
-                                 "isATP":false
-                              }
-                           ]
-                        },
-                        {
-                           "lctNbr":2395,
-                           "distance":26.3,
-                           "isAvlSts":true,
-                           "onhandQty":3,
-                           "totalQty":3,
-                           "itmLdTm":"10-20-2022-04:00 UTC",
-                           "itmLdTmDays":0,
-                           "fullPath":[
-                              {
-                                 "pathSequence":1,
-                                 "pathLctNbr":2395,
-                                 "pathLctType":"store",
-                                 "pathLctCompany":"lowes",
-                                 "availabilityDate":"10-20-2022-04:00 UTC",
-                                 "sourcedQty":1,
-                                 "isATP":false
-                              }
-                           ]
-                        },
-                        {
-                           "lctNbr":2327,
-                           "distance":27.4,
-                           "isAvlSts":true,
-                           "onhandQty":1,
-                           "totalQty":1,
-                           "itmLdTm":"10-20-2022-04:00 UTC",
-                           "itmLdTmDays":0,
-                           "fullPath":[
-                              {
-                                 "pathSequence":1,
-                                 "pathLctNbr":2327,
-                                 "pathLctType":"store",
-                                 "pathLctCompany":"lowes",
-                                 "availabilityDate":"10-20-2022-04:00 UTC",
-                                 "sourcedQty":1,
-                                 "isATP":false
-                              }
-                           ]
-                        }
-                     ],
-                     "nodeType":"store",
-                     "timeToCutOff":"220",
-                     "isDynamicLeadTime":true,
-                     "itmLdDateTm":"2022-10-20T15:19-04:00",
-                     "maxAvailQty":0,
-                     "physicalInvQty":0
-                  },
-                  {
-                     "fullMtdTyp":3,
-                     "fullMtdMsg":"Delivery",
-                     "fullCarrierSvc":"Box Truck",
-                     "fullLctNbr":2383,
-                     "isAvlSts":true,
-                     "totalQty":2,
-                     "onhandQty":0,
-                     "itmLdTmAvlQty":2,
-                     "itmLdTm":"10-20-2022-04:00 UTC",
-                     "itmConsolidationDate":"10-21-2022-04:00 UTC",
-                     "itmLdTmDays":0,
-                     "fullPath":[
-                        {
-                           "pathSequence":1,
-                           "pathLctNbr":2383,
-                           "pathLctType":"store",
-                           "pathLctCompany":"lowes",
-                           "availabilityDate":"10-20-2022-04:00 UTC",
-                           "sourcedQty":1,
-                           "isATP":false
-                        }
-                     ],
-                     "nodeType":"store",
-                     "timeToCutOff":"220",
-                     "maxAvailQty":0
-                  }
-               ]
-            },
-            "locator":{
-               "lookupStatus":"OK",
-               "storeProductLocations":[
-                  {
-                     "storeId":2383,
-                     "productId":877343,
-                     "productLocation":[
-                        {
-                           "aisle":"13",
-                           "bay":"DESK",
-                           "level":"REGISTERS - FRONT"
-                        },
-                        {
-                           "aisle":"951",
-                           "bay":"G04",
-                           "level":null
-                        }
-                     ]
-                  }
-               ]
-            },
-            "promotion":{
-               "promoList":[
-                  {
-                     "promoId":"3246040671038227506",
-                     "promoType":"FinanceLevelDiscount",
-                     "promoName":"DP 18460301 GEN-3-6-2021 RTD",
-                     "displayPromoMsg":"DP 18460301 GEN-3-6-2021 RTD",
-                     "displayPriority":12,
-                     "promoGroupCode":"FinanceLevelPromotion",
-                     "startDateTime":"2022-09-08 03:00:00",
-                     "endDateTime":"2022-12-31 03:00:00",
-                     "financeTermType":"GEN",
-                     "financeTermId":"GEN-3-6-2021",
-                     "financeTypeId":0,
-                     "financeThresholdAmount":299,
-                     "financeMonths":6,
-                     "financePromoPercent":"5",
-                     "financeAnualPercentRate":0
-                  },
-                  {
-                     "promoId":"3150481981446471018",
-                     "promoType":"FinanceLevelDiscount",
-                     "promoName":"PROJ-2000-84-2021",
-                     "displayPriority":34,
-                     "promoGroupCode":"FinanceLevelPromotion",
-                     "startDateTime":"2020-12-31 19:00:00",
-                     "endDateTime":"2022-12-31 03:00:00",
-                     "financeTermType":"GEN",
-                     "financeTermId":"PROJ-2000-84-2021",
-                     "financeTypeId":1,
-                     "financeThresholdAmount":2000,
-                     "financeMonths":84,
-                     "financePromoPercent":"5",
-                     "financeAnualPercentRate":7.99
-                  },
-                  {
-                     "promoId":"2261456382434261844",
-                     "promoType":"ExtOrderLevelFixedShippingDiscount",
-                     "promoName":"Store Only Shipping Promo",
-                     "displayPromoMsg":"Free Shipping!",
-                     "displayPriority":0,
-                     "promoGroupCode":"ShippingPromotion",
-                     "startDateTime":"2021-02-23 22:00:00",
-                     "endDateTime":"2025-12-31 18:59:59",
-                     "custViewableDescLong":"Free Shipping!",
-                     "qualifyingAmount":0
-                  },
-                  {
-                     "promoId":"4174089095793260310",
-                     "promoType":"ExtOrderLevelFixedShippingDiscount",
-                     "promoName":"FREE DELIVERY - DO NOT DEACTIVATE UPDATED",
-                     "displayPromoMsg":"Free Lowes Truck Delivery",
-                     "displayPriority":0,
-                     "promoGroupCode":"ShippingPromotion",
-                     "startDateTime":"2020-08-20 20:00:00",
-                     "endDateTime":"2025-12-31 18:59:59",
-                     "custViewableDescLong":"Free Lowes Truck Delivery",
-                     "qualifyingAmount":0
-                  },
-                  {
-                     "promoId":"541128533393819749",
-                     "promoType":"ExtOrderLevelFixedShippingDiscount",
-                     "promoName":"Hazmat In Store Promo",
-                     "displayPromoMsg":"Hazmat In Store Free Shipping!",
-                     "displayPriority":0,
-                     "promoGroupCode":"ShippingPromotion",
-                     "startDateTime":"2019-10-07 23:00:00",
-                     "endDateTime":"2025-12-31 18:59:59",
-                     "custViewableDescLong":"Hazmat In Store Free Shipping!",
-                     "qualifyingAmount":0
-                  },
-                  {
-                     "promoId":"1530540586193014597",
-                     "promoType":"ExtOrderLevelFixedShippingDiscount",
-                     "promoName":"Hazmat Free Parcel Shipping on Orders $45 or more",
-                     "displayPromoMsg":"Hazmat Free Parcel Shipping on Orders $45 or more",
-                     "displayPriority":0,
-                     "promoGroupCode":"ShippingPromotion",
-                     "startDateTime":"2019-10-07 23:00:00",
-                     "endDateTime":"2025-12-31 18:59:59",
-                     "custViewableDescLong":"Hazmat Free Parcel Shipping on Orders $45 or more",
-                     "qualifyingAmount":45
-                  },
-                  {
-                     "promoId":"1516395965046501389",
-                     "promoType":"ExtOrderLevelFixedShippingDiscount",
-                     "promoName":"SOS Collect Free Shipping over $45 - Online",
-                     "displayPromoMsg":"Free Shipping",
-                     "displayPriority":0,
-                     "promoGroupCode":"ShippingPromotion",
-                     "startDateTime":"2019-10-22 23:00:00",
-                     "endDateTime":"2025-12-31 18:59:59",
-                     "custViewableDescLong":"Free Shipping",
-                     "qualifyingAmount":45
-                  },
-                  {
-                     "promoId":"2596602396666053000",
-                     "promoType":"ExtOrderLevelFixedShippingDiscount",
-                     "promoName":"RECREATE FREE DELIVER2 UPDATED",
-                     "displayPromoMsg":"Free Lowes Truck Delivery",
-                     "displayPriority":0,
-                     "promoGroupCode":"ShippingPromotion",
-                     "startDateTime":"2020-08-20 20:00:00",
-                     "endDateTime":"2025-12-31 18:59:59",
-                     "custViewableDescLong":"Free Lowes Truck Delivery",
-                     "qualifyingAmount":0
-                  },
-                  {
-                     "promoId":"2363619650769106386",
-                     "promoType":"ExtOrderLevelFixedShippingDiscount",
-                     "promoName":"Free Parcel Shipping 2",
-                     "displayPromoMsg":"Free Parcel Shipping!",
-                     "displayPriority":0,
-                     "promoGroupCode":"ShippingPromotion",
-                     "startDateTime":"2018-03-28 19:59:00",
-                     "endDateTime":"2025-12-31 18:59:59",
-                     "custViewableDescLong":"Free Parcel Shipping!",
-                     "qualifyingAmount":45
-                  },
-                  {
-                     "promoId":"8922198449360845083",
-                     "promoType":"ExtLCCOrderLevelPercentDiscount",
-                     "promoName":"5 OFF WITH LCC CARD CREDIT NEW .com",
-                     "displayPromoMsg":"5% Lowe's Cardholder Discount",
-                     "displayPriority":0,
-                     "promoGroupCode":"OrderLevelPromotion",
-                     "startDateTime":"2022-04-27 10:55:00",
-                     "endDateTime":"2025-12-30 22:00:00",
-                     "custViewableDescLong":"CREDIT DISCOUNT",
-                     "percentOff":5,
-                     "offerPrice":35.131,
-                     "bannerName":"lac-5-Off"
-                  }
-               ],
-               "omniItemId":"1001181690",
-               "itemNumber":"877343",
-               "vendorNumber":"1353",
-               "modelId":"43682-TS1",
-               "defaultFulfillmentTypesFree":false,
-               "site":"lowes",
-               "zipCode":"06416",
-               "locationNumber":"2383",
-               "freeDelivery":false,
-               "promoGroups":{
-                  "FinanceLevelPromotion":{
-                     "promoId":"3246040671038227506",
-                     "promoType":"FinanceLevelDiscount",
-                     "promoName":"DP 18460301 GEN-3-6-2021 RTD",
-                     "displayPromoMsg":"DP 18460301 GEN-3-6-2021 RTD",
-                     "displayPriority":12,
-                     "promoGroupCode":"FinanceLevelPromotion",
-                     "startDateTime":"2022-09-08 03:00:00",
-                     "endDateTime":"2022-12-31 03:00:00",
-                     "financeTermType":"GEN",
-                     "financeTermId":"GEN-3-6-2021",
-                     "financeTypeId":0,
-                     "financeThresholdAmount":299,
-                     "financeMonths":6,
-                     "financePromoPercent":"5",
-                     "financeAnualPercentRate":0
-                  },
-                  "ShippingPromotion":{
-                     "promoId":"2261456382434261844",
-                     "promoType":"ExtOrderLevelFixedShippingDiscount",
-                     "promoName":"Store Only Shipping Promo",
-                     "displayPromoMsg":"Free Shipping!",
-                     "displayPriority":0,
-                     "promoGroupCode":"ShippingPromotion",
-                     "startDateTime":"2021-02-23 22:00:00",
-                     "endDateTime":"2025-12-31 18:59:59",
-                     "custViewableDescLong":"Free Shipping!",
-                     "qualifyingAmount":0
-                  },
-                  "OrderLevelPromotion":{
-                     "promoId":"8922198449360845083",
-                     "promoType":"ExtLCCOrderLevelPercentDiscount",
-                     "promoName":"5 OFF WITH LCC CARD CREDIT NEW .com",
-                     "displayPromoMsg":"5% Lowe's Cardholder Discount",
-                     "displayPriority":0,
-                     "promoGroupCode":"OrderLevelPromotion",
-                     "startDateTime":"2022-04-27 10:55:00",
-                     "endDateTime":"2025-12-30 22:00:00",
-                     "custViewableDescLong":"CREDIT DISCOUNT",
-                     "percentOff":5,
-                     "offerPrice":35.131,
-                     "bannerName":"lac-5-Off"
-                  }
-               }
-            },
-            "restriction":{
-
-            },
-            "posRestriction":null,
-            "storeRestrictions":null,
-            "messages":null,
-            "productAssoc":{
-
-            },
-            "additionalServices":false,
-            "sosVendorDirect":false
-         },
-         "itemInventory":{
-            "requiredQuantity":1,
-            "analyticsData":{
-               "parcel":{
-                  "fullMtdMsg":"Parcel",
-                  "isAvlSts":false,
-                  "itmLdTmDays":0,
-                  "onhandQty":0,
-                  "totalQty":0,
-                  "itmLdTm":"",
-                  "productStockType":"STK",
-                  "availabilityStatus":"Not Available",
-                  "deliveryMethodId":1,
-                  "deliveryMethodName":"Parcel Shipping",
-                  "availabileQuantity":0,
-                  "availableQuantity":0
-               },
-               "pickup":{
-                  "fullMtdMsg":"Pickup",
-                  "isAvlSts":true,
-                  "itmLdTmDays":0,
-                  "onhandQty":2,
-                  "totalQty":2,
-                  "itmLdTm":"10-20-2022-04:00 UTC",
-                  "isDynamicLeadTime":true,
-                  "nearestStores":[
-                     {
-                        "lctNbr":650,
-                        "distance":9,
-                        "isAvlSts":true,
-                        "onhandQty":1,
-                        "totalQty":1,
-                        "itmLdTm":"10-20-2022-04:00 UTC",
-                        "itmLdTmDays":0,
-                        "fullPath":[
-                           {
-                              "pathSequence":1,
-                              "pathLctNbr":650,
-                              "pathLctType":"store",
-                              "pathLctCompany":"lowes",
-                              "availabilityDate":"10-20-2022-04:00 UTC",
-                              "sourcedQty":1,
-                              "isATP":false
-                           }
-                        ]
-                     },
-                     {
-                        "lctNbr":2288,
-                        "distance":9.3,
-                        "isAvlSts":true,
-                        "onhandQty":1,
-                        "totalQty":1,
-                        "itmLdTm":"10-20-2022-04:00 UTC",
-                        "itmLdTmDays":0,
-                        "fullPath":[
-                           {
-                              "pathSequence":1,
-                              "pathLctNbr":2288,
-                              "pathLctType":"store",
-                              "pathLctCompany":"lowes",
-                              "availabilityDate":"10-20-2022-04:00 UTC",
-                              "sourcedQty":1,
-                              "isATP":false
-                           }
-                        ]
-                     },
-                     {
-                        "lctNbr":2910,
-                        "distance":10.7,
-                        "isAvlSts":true,
-                        "onhandQty":2,
-                        "totalQty":2,
-                        "itmLdTm":"10-20-2022-04:00 UTC",
-                        "itmLdTmDays":0,
-                        "fullPath":[
-                           {
-                              "pathSequence":1,
-                              "pathLctNbr":2910,
-                              "pathLctType":"store",
-                              "pathLctCompany":"lowes",
-                              "availabilityDate":"10-20-2022-04:00 UTC",
-                              "sourcedQty":1,
-                              "isATP":false
-                           }
-                        ]
-                     },
-                     {
-                        "lctNbr":1665,
-                        "distance":14.6,
-                        "isAvlSts":true,
-                        "onhandQty":2,
-                        "totalQty":2,
-                        "itmLdTm":"10-20-2022-04:00 UTC",
-                        "itmLdTmDays":0,
-                        "fullPath":[
-                           {
-                              "pathSequence":1,
-                              "pathLctNbr":1665,
-                              "pathLctType":"store",
-                              "pathLctCompany":"lowes",
-                              "availabilityDate":"10-20-2022-04:00 UTC",
-                              "sourcedQty":1,
-                              "isATP":false
-                           }
-                        ]
-                     },
-                     {
-                        "lctNbr":2395,
-                        "distance":26.3,
-                        "isAvlSts":true,
-                        "onhandQty":3,
-                        "totalQty":3,
-                        "itmLdTm":"10-20-2022-04:00 UTC",
-                        "itmLdTmDays":0,
-                        "fullPath":[
-                           {
-                              "pathSequence":1,
-                              "pathLctNbr":2395,
-                              "pathLctType":"store",
-                              "pathLctCompany":"lowes",
-                              "availabilityDate":"10-20-2022-04:00 UTC",
-                              "sourcedQty":1,
-                              "isATP":false
-                           }
-                        ]
-                     },
-                     {
-                        "lctNbr":2327,
-                        "distance":27.4,
-                        "isAvlSts":true,
-                        "onhandQty":1,
-                        "totalQty":1,
-                        "itmLdTm":"10-20-2022-04:00 UTC",
-                        "itmLdTmDays":0,
-                        "fullPath":[
-                           {
-                              "pathSequence":1,
-                              "pathLctNbr":2327,
-                              "pathLctType":"store",
-                              "pathLctCompany":"lowes",
-                              "availabilityDate":"10-20-2022-04:00 UTC",
-                              "sourcedQty":1,
-                              "isATP":false
-                           }
-                        ]
-                     }
-                  ],
-                  "productStockType":"STK",
-                  "availabilityStatus":"Available",
-                  "deliveryMethodId":2,
-                  "deliveryMethodName":"Store Pickup",
-                  "availabileQuantity":2,
-                  "availableQuantity":2,
-                  "leadTime":1666238400000,
-                  "leadtimeToday":true
-               },
-               "truck":{
-                  "fullMtdMsg":"Delivery",
-                  "isAvlSts":true,
-                  "itmLdTmDays":0,
-                  "onhandQty":0,
-                  "totalQty":2,
-                  "itmLdTm":"10-20-2022-04:00 UTC",
-                  "productStockType":"STK",
-                  "availabilityStatus":"Available",
-                  "deliveryMethodId":3,
-                  "deliveryMethodName":"Truck Delivery",
-                  "availabileQuantity":2,
-                  "availableQuantity":2,
-                  "leadTime":1666238400000,
-                  "leadtimeToday":true
-               }
-            },
-            "inventoryDisplay":{
-               "pickup":{
-                  "availabilityStatus":true,
-                  "onhandQty":2,
-                  "totalQty":2,
-                  "leadTime":1666238400000,
-                  "leadtimeToday":true,
-                  "productStockType":"STK",
-                  "itmLdTmDays":"",
-                  "isDynamicLeadTime":true,
-                  "nearestStores":[
-                     {
-                        "lctNbr":650,
-                        "distance":9,
-                        "isAvlSts":true,
-                        "onhandQty":1,
-                        "totalQty":1,
-                        "itmLdTm":"10-20-2022-04:00 UTC",
-                        "itmLdTmDays":0,
-                        "fullPath":[
-                           {
-                              "pathSequence":1,
-                              "pathLctNbr":650,
-                              "pathLctType":"store",
-                              "pathLctCompany":"lowes",
-                              "availabilityDate":"10-20-2022-04:00 UTC",
-                              "sourcedQty":1,
-                              "isATP":false
-                           }
-                        ]
-                     },
-                     {
-                        "lctNbr":2288,
-                        "distance":9.3,
-                        "isAvlSts":true,
-                        "onhandQty":1,
-                        "totalQty":1,
-                        "itmLdTm":"10-20-2022-04:00 UTC",
-                        "itmLdTmDays":0,
-                        "fullPath":[
-                           {
-                              "pathSequence":1,
-                              "pathLctNbr":2288,
-                              "pathLctType":"store",
-                              "pathLctCompany":"lowes",
-                              "availabilityDate":"10-20-2022-04:00 UTC",
-                              "sourcedQty":1,
-                              "isATP":false
-                           }
-                        ]
-                     },
-                     {
-                        "lctNbr":2910,
-                        "distance":10.7,
-                        "isAvlSts":true,
-                        "onhandQty":2,
-                        "totalQty":2,
-                        "itmLdTm":"10-20-2022-04:00 UTC",
-                        "itmLdTmDays":0,
-                        "fullPath":[
-                           {
-                              "pathSequence":1,
-                              "pathLctNbr":2910,
-                              "pathLctType":"store",
-                              "pathLctCompany":"lowes",
-                              "availabilityDate":"10-20-2022-04:00 UTC",
-                              "sourcedQty":1,
-                              "isATP":false
-                           }
-                        ]
-                     },
-                     {
-                        "lctNbr":1665,
-                        "distance":14.6,
-                        "isAvlSts":true,
-                        "onhandQty":2,
-                        "totalQty":2,
-                        "itmLdTm":"10-20-2022-04:00 UTC",
-                        "itmLdTmDays":0,
-                        "fullPath":[
-                           {
-                              "pathSequence":1,
-                              "pathLctNbr":1665,
-                              "pathLctType":"store",
-                              "pathLctCompany":"lowes",
-                              "availabilityDate":"10-20-2022-04:00 UTC",
-                              "sourcedQty":1,
-                              "isATP":false
-                           }
-                        ]
-                     },
-                     {
-                        "lctNbr":2395,
-                        "distance":26.3,
-                        "isAvlSts":true,
-                        "onhandQty":3,
-                        "totalQty":3,
-                        "itmLdTm":"10-20-2022-04:00 UTC",
-                        "itmLdTmDays":0,
-                        "fullPath":[
-                           {
-                              "pathSequence":1,
-                              "pathLctNbr":2395,
-                              "pathLctType":"store",
-                              "pathLctCompany":"lowes",
-                              "availabilityDate":"10-20-2022-04:00 UTC",
-                              "sourcedQty":1,
-                              "isATP":false
-                           }
-                        ]
-                     },
-                     {
-                        "lctNbr":2327,
-                        "distance":27.4,
-                        "isAvlSts":true,
-                        "onhandQty":1,
-                        "totalQty":1,
-                        "itmLdTm":"10-20-2022-04:00 UTC",
-                        "itmLdTmDays":0,
-                        "fullPath":[
-                           {
-                              "pathSequence":1,
-                              "pathLctNbr":2327,
-                              "pathLctType":"store",
-                              "pathLctCompany":"lowes",
-                              "availabilityDate":"10-20-2022-04:00 UTC",
-                              "sourcedQty":1,
-                              "isATP":false
-                           }
-                        ]
-                     }
-                  ]
-               },
-               "delivery":{
-                  "availabilityStatus":true,
-                  "totalQty":2,
-                  "leadTime":1666238400000,
-                  "leadtimeToday":true,
-                  "productStockType":"STK",
-                  "itmLdTmDays":"",
-                  "deliveryMethodName":"Delivery",
-                  "onhandQty":0,
-                  "itmLdTm":"10-20-2022-04:00 UTC"
-               },
-               "freeDelivery":{
-                  "sos":false,
-                  "vendorDirect":true,
-                  "ltl":false,
-                  "truck":true,
-                  "prePaidParcel":false,
-                  "parcel":false,
-                  "truckPromo":-1,
-                  "ltlPromo":-1,
-                  "status":true,
-                  "message":"Delivery"
-               }
-            },
-            "pickupQuantity":2,
-            "totalAvailableQty":4,
-            "productLocation":{
-               "bay":"DESK",
-               "aisle":"13"
-            }
-         },
-         "price":{
-            "displayPriceType":"selling",
-            "analyticsData":{
-               "sellingPrice":36.98,
-               "retailPrice":36.98
-            },
-            "isDisplayOnly":false,
-            "displayType":"REGULAR",
-            "isRegular":true,
-            "isSOS":false,
-            "isLowerPriceInCart":false,
-            "isStrikeThroughPriceIndicator":false,
-            "mapPrice":null,
-            "wasPrice":null,
-            "displayPrice":{
-               "cent":"98",
-               "dollar":"36"
-            },
-            "itemPrice":36.98,
-            "type":"STORE"
-         },
-         "additionalServices":false,
-         "productAssoc":{
-
-         },
-         "restriction":{
-
-         },
-         "locator":{
-            "lookupStatus":"OK",
-            "storeProductLocations":[
-               {
-                  "storeId":2383,
-                  "productId":877343,
-                  "productLocation":[
-                     {
-                        "aisle":"13",
-                        "bay":"DESK",
-                        "level":"REGISTERS - FRONT"
-                     },
-                     {
-                        "aisle":"951",
-                        "bay":"G04",
-                        "level":null
-                     }
-                  ]
-               }
-            ]
-         },
-         "lacPromotions":[
+         "acceptingAppointments":null,
+         "appointmentTypes":null,
+         "siteBopus":[
             {
-               "promoId":"3246040671038227506",
-               "promoType":"FinanceLevelDiscount",
-               "promoName":"DP 18460301 GEN-3-6-2021 RTD",
-               "displayPromoMsg":"DP 18460301 GEN-3-6-2021 RTD",
-               "displayPriority":12,
-               "promoGroupCode":"FinanceLevelPromotion",
-               "startDateTime":"2022-09-08 03:00:00",
-               "endDateTime":"2022-12-31 03:00:00",
-               "financeTermType":"GEN",
-               "financeTermId":"GEN-3-6-2021",
-               "financeTypeId":0,
-               "financeThresholdAmount":299,
-               "financeMonths":6,
-               "financePromoPercent":"5",
-               "financeAnualPercentRate":0
+               "siteId":"BedBathCanada",
+               "bopusFlag":1
             },
             {
-               "promoId":"3150481981446471018",
-               "promoType":"FinanceLevelDiscount",
-               "promoName":"PROJ-2000-84-2021",
-               "displayPriority":34,
-               "promoGroupCode":"FinanceLevelPromotion",
-               "startDateTime":"2020-12-31 19:00:00",
-               "endDateTime":"2022-12-31 03:00:00",
-               "financeTermType":"GEN",
-               "financeTermId":"PROJ-2000-84-2021",
-               "financeTypeId":1,
-               "financeThresholdAmount":2000,
-               "financeMonths":84,
-               "financePromoPercent":"5",
-               "financeAnualPercentRate":7.99
+               "siteId":"BedBathUS",
+               "bopusFlag":1
+            },
+            {
+               "siteId":"BuyBuyBaby",
+               "bopusFlag":1
+            },
+            {
+               "siteId":"TBS_BedBathCanada",
+               "bopusFlag":1
+            },
+            {
+               "siteId":"TBS_BedBathUS",
+               "bopusFlag":1
+            },
+            {
+               "siteId":"TBS_BuyBuyBaby",
+               "bopusFlag":1
             }
          ],
-         "offerPromotions":{
-            "promoId":"8922198449360845083",
-            "promoType":"ExtLCCOrderLevelPercentDiscount",
-            "promoName":"5 OFF WITH LCC CARD CREDIT NEW .com",
-            "displayPromoMsg":"5% Lowe's Cardholder Discount",
-            "displayPriority":0,
-            "promoGroupCode":"OrderLevelPromotion",
-            "startDateTime":"2022-04-27 10:55:00",
-            "endDateTime":"2025-12-30 22:00:00",
-            "custViewableDescLong":"CREDIT DISCOUNT",
-            "percentOff":5,
-            "offerPrice":35.131,
-            "bannerName":"lac-5-Off"
-         },
-         "financeTermId":"GEN-3-6-2021",
-         "mfePrice":{
-            "price":{
-               "currency":"$",
-               "finalPriceForUi":"36",
-               "finalPriceCentForUi":"98",
-               "additionalData":{
-                  "displayType":"REGULAR",
-                  "sellingPrice":36.98,
-                  "retailPrice":36.98,
-                  "displayPriceType":"selling",
-                  "type":"STORE"
-               }
-            }
-         },
-         "LACOfferPromotion":{
-            "promoId":"8922198449360845083",
-            "promoType":"ExtLCCOrderLevelPercentDiscount",
-            "promoName":"5 OFF WITH LCC CARD CREDIT NEW .com",
-            "displayPromoMsg":"5% Lowe's Cardholder Discount",
-            "displayPriority":0,
-            "promoGroupCode":"OrderLevelPromotion",
-            "startDateTime":"2022-04-27 10:55:00",
-            "endDateTime":"2025-12-30 22:00:00",
-            "custViewableDescLong":"CREDIT DISCOUNT",
-            "percentOff":5,
-            "offerPrice":35.131,
-            "bannerName":"lac-5-Off"
-         }
-      }
-   },
-   "productId":"1001181690",
-   "inventory":{
-      "requiredQuantity":1,
-      "analyticsData":{
-         "parcel":{
-            "fullMtdMsg":"Parcel",
-            "isAvlSts":false,
-            "itmLdTmDays":0,
-            "onhandQty":0,
-            "totalQty":0,
-            "itmLdTm":"",
-            "productStockType":"STK",
-            "availabilityStatus":"Not Available",
-            "deliveryMethodId":1,
-            "deliveryMethodName":"Parcel Shipping",
-            "availabileQuantity":0,
-            "availableQuantity":0
-         },
-         "pickup":{
-            "fullMtdMsg":"Pickup",
-            "isAvlSts":true,
-            "itmLdTmDays":0,
-            "onhandQty":2,
-            "totalQty":2,
-            "itmLdTm":"10-20-2022-04:00 UTC",
-            "isDynamicLeadTime":true,
-            "nearestStores":[
-               {
-                  "lctNbr":650,
-                  "distance":9,
-                  "isAvlSts":true,
-                  "onhandQty":1,
-                  "totalQty":1,
-                  "itmLdTm":"10-20-2022-04:00 UTC",
-                  "itmLdTmDays":0,
-                  "fullPath":[
-                     {
-                        "pathSequence":1,
-                        "pathLctNbr":650,
-                        "pathLctType":"store",
-                        "pathLctCompany":"lowes",
-                        "availabilityDate":"10-20-2022-04:00 UTC",
-                        "sourcedQty":1,
-                        "isATP":false
-                     }
-                  ]
-               },
-               {
-                  "lctNbr":2288,
-                  "distance":9.3,
-                  "isAvlSts":true,
-                  "onhandQty":1,
-                  "totalQty":1,
-                  "itmLdTm":"10-20-2022-04:00 UTC",
-                  "itmLdTmDays":0,
-                  "fullPath":[
-                     {
-                        "pathSequence":1,
-                        "pathLctNbr":2288,
-                        "pathLctType":"store",
-                        "pathLctCompany":"lowes",
-                        "availabilityDate":"10-20-2022-04:00 UTC",
-                        "sourcedQty":1,
-                        "isATP":false
-                     }
-                  ]
-               },
-               {
-                  "lctNbr":2910,
-                  "distance":10.7,
-                  "isAvlSts":true,
-                  "onhandQty":2,
-                  "totalQty":2,
-                  "itmLdTm":"10-20-2022-04:00 UTC",
-                  "itmLdTmDays":0,
-                  "fullPath":[
-                     {
-                        "pathSequence":1,
-                        "pathLctNbr":2910,
-                        "pathLctType":"store",
-                        "pathLctCompany":"lowes",
-                        "availabilityDate":"10-20-2022-04:00 UTC",
-                        "sourcedQty":1,
-                        "isATP":false
-                     }
-                  ]
-               },
-               {
-                  "lctNbr":1665,
-                  "distance":14.6,
-                  "isAvlSts":true,
-                  "onhandQty":2,
-                  "totalQty":2,
-                  "itmLdTm":"10-20-2022-04:00 UTC",
-                  "itmLdTmDays":0,
-                  "fullPath":[
-                     {
-                        "pathSequence":1,
-                        "pathLctNbr":1665,
-                        "pathLctType":"store",
-                        "pathLctCompany":"lowes",
-                        "availabilityDate":"10-20-2022-04:00 UTC",
-                        "sourcedQty":1,
-                        "isATP":false
-                     }
-                  ]
-               },
-               {
-                  "lctNbr":2395,
-                  "distance":26.3,
-                  "isAvlSts":true,
-                  "onhandQty":3,
-                  "totalQty":3,
-                  "itmLdTm":"10-20-2022-04:00 UTC",
-                  "itmLdTmDays":0,
-                  "fullPath":[
-                     {
-                        "pathSequence":1,
-                        "pathLctNbr":2395,
-                        "pathLctType":"store",
-                        "pathLctCompany":"lowes",
-                        "availabilityDate":"10-20-2022-04:00 UTC",
-                        "sourcedQty":1,
-                        "isATP":false
-                     }
-                  ]
-               },
-               {
-                  "lctNbr":2327,
-                  "distance":27.4,
-                  "isAvlSts":true,
-                  "onhandQty":1,
-                  "totalQty":1,
-                  "itmLdTm":"10-20-2022-04:00 UTC",
-                  "itmLdTmDays":0,
-                  "fullPath":[
-                     {
-                        "pathSequence":1,
-                        "pathLctNbr":2327,
-                        "pathLctType":"store",
-                        "pathLctCompany":"lowes",
-                        "availabilityDate":"10-20-2022-04:00 UTC",
-                        "sourcedQty":1,
-                        "isATP":false
-                     }
-                  ]
-               }
-            ],
-            "productStockType":"STK",
-            "availabilityStatus":"Available",
-            "deliveryMethodId":2,
-            "deliveryMethodName":"Store Pickup",
-            "availabileQuantity":2,
-            "availableQuantity":2,
-            "leadTime":1666238400000,
-            "leadtimeToday":true
-         },
-         "truck":{
-            "fullMtdMsg":"Delivery",
-            "isAvlSts":true,
-            "itmLdTmDays":0,
-            "onhandQty":0,
-            "totalQty":2,
-            "itmLdTm":"10-20-2022-04:00 UTC",
-            "productStockType":"STK",
-            "availabilityStatus":"Available",
-            "deliveryMethodId":3,
-            "deliveryMethodName":"Truck Delivery",
-            "availabileQuantity":2,
-            "availableQuantity":2,
-            "leadTime":1666238400000,
-            "leadtimeToday":true
-         }
+         "distance":"5.0372",
+         "distanceUnit":"m",
+         "storeTimings":"Thursday: 10:00am-8:00pm, Friday: 10:00am-8:00pm, Saturday: 10:00am-9:00pm, Sunday: 10:00am-7:00pm, Monday: 10:00am-8:00pm, Tuesday: 10:00am-8:00pm, Wednesday: 10:00am-8:00pm",
+         "storeEnabled":"Y",
+         "storeStatus":0,
+         "storeMessege":null,
+         "hurryMsg":null,
+         "bannerName":null,
+         "inventoryATS":0,
+         "atcStatus":1
       },
-      "inventoryDisplay":{
-         "pickup":{
-            "availabilityStatus":true,
-            "onhandQty":2,
-            "totalQty":2,
-            "leadTime":1666238400000,
-            "leadtimeToday":true,
-            "productStockType":"STK",
-            "itmLdTmDays":"",
-            "isDynamicLeadTime":true,
-            "nearestStores":[
-               {
-                  "lctNbr":650,
-                  "distance":9,
-                  "isAvlSts":true,
-                  "onhandQty":1,
-                  "totalQty":1,
-                  "itmLdTm":"10-20-2022-04:00 UTC",
-                  "itmLdTmDays":0,
-                  "fullPath":[
-                     {
-                        "pathSequence":1,
-                        "pathLctNbr":650,
-                        "pathLctType":"store",
-                        "pathLctCompany":"lowes",
-                        "availabilityDate":"10-20-2022-04:00 UTC",
-                        "sourcedQty":1,
-                        "isATP":false
-                     }
-                  ]
-               },
-               {
-                  "lctNbr":2288,
-                  "distance":9.3,
-                  "isAvlSts":true,
-                  "onhandQty":1,
-                  "totalQty":1,
-                  "itmLdTm":"10-20-2022-04:00 UTC",
-                  "itmLdTmDays":0,
-                  "fullPath":[
-                     {
-                        "pathSequence":1,
-                        "pathLctNbr":2288,
-                        "pathLctType":"store",
-                        "pathLctCompany":"lowes",
-                        "availabilityDate":"10-20-2022-04:00 UTC",
-                        "sourcedQty":1,
-                        "isATP":false
-                     }
-                  ]
-               },
-               {
-                  "lctNbr":2910,
-                  "distance":10.7,
-                  "isAvlSts":true,
-                  "onhandQty":2,
-                  "totalQty":2,
-                  "itmLdTm":"10-20-2022-04:00 UTC",
-                  "itmLdTmDays":0,
-                  "fullPath":[
-                     {
-                        "pathSequence":1,
-                        "pathLctNbr":2910,
-                        "pathLctType":"store",
-                        "pathLctCompany":"lowes",
-                        "availabilityDate":"10-20-2022-04:00 UTC",
-                        "sourcedQty":1,
-                        "isATP":false
-                     }
-                  ]
-               },
-               {
-                  "lctNbr":1665,
-                  "distance":14.6,
-                  "isAvlSts":true,
-                  "onhandQty":2,
-                  "totalQty":2,
-                  "itmLdTm":"10-20-2022-04:00 UTC",
-                  "itmLdTmDays":0,
-                  "fullPath":[
-                     {
-                        "pathSequence":1,
-                        "pathLctNbr":1665,
-                        "pathLctType":"store",
-                        "pathLctCompany":"lowes",
-                        "availabilityDate":"10-20-2022-04:00 UTC",
-                        "sourcedQty":1,
-                        "isATP":false
-                     }
-                  ]
-               },
-               {
-                  "lctNbr":2395,
-                  "distance":26.3,
-                  "isAvlSts":true,
-                  "onhandQty":3,
-                  "totalQty":3,
-                  "itmLdTm":"10-20-2022-04:00 UTC",
-                  "itmLdTmDays":0,
-                  "fullPath":[
-                     {
-                        "pathSequence":1,
-                        "pathLctNbr":2395,
-                        "pathLctType":"store",
-                        "pathLctCompany":"lowes",
-                        "availabilityDate":"10-20-2022-04:00 UTC",
-                        "sourcedQty":1,
-                        "isATP":false
-                     }
-                  ]
-               },
-               {
-                  "lctNbr":2327,
-                  "distance":27.4,
-                  "isAvlSts":true,
-                  "onhandQty":1,
-                  "totalQty":1,
-                  "itmLdTm":"10-20-2022-04:00 UTC",
-                  "itmLdTmDays":0,
-                  "fullPath":[
-                     {
-                        "pathSequence":1,
-                        "pathLctNbr":2327,
-                        "pathLctType":"store",
-                        "pathLctCompany":"lowes",
-                        "availabilityDate":"10-20-2022-04:00 UTC",
-                        "sourcedQty":1,
-                        "isATP":false
-                     }
-                  ]
-               }
-            ]
+      "sddData":{
+         "displayCutOffTime":"5pm",
+         "displayGetByTime":{
+            "today":true,
+            "tomorrow":false
          },
-         "delivery":{
-            "availabilityStatus":true,
-            "totalQty":2,
-            "leadTime":1666238400000,
-            "leadtimeToday":true,
-            "productStockType":"STK",
-            "itmLdTmDays":"",
-            "deliveryMethodName":"Delivery",
-            "onhandQty":0,
-            "itmLdTm":"10-20-2022-04:00 UTC"
-         },
-         "freeDelivery":{
-            "sos":false,
-            "vendorDirect":true,
-            "ltl":false,
-            "truck":true,
-            "prePaidParcel":false,
-            "parcel":false,
-            "truckPromo":-1,
-            "ltlPromo":-1,
-            "status":true,
-            "message":"Delivery"
-         }
+         "minShipFee":0.0,
+         "sddFlag":true,
+         "storeIds":[
+            "1341"
+         ],
+         "timeZone":"America/New_York",
+         "zipCode":"19713",
+         "sddCutOffTime":"Order by 5pm",
+         "sddMsgAmp":null,
+         "sddShippingFeeMsg":"Just $9.99 on all your orders",
+         "sddBeforeCutOffTimeMsg":"Order by 5pm, get it today",
+         "sddAfterCutOffTimeMsg":"Order after 5pm, get it tomorrow",
+         "carrier":[
+            {
+               "carrierName":"DoorDash",
+               "cutOffTime":"2",
+               "smartWindowEligible":false
+            },
+            {
+               "carrierName":"Roadie",
+               "cutOffTime":"2",
+               "smartWindowEligible":false
+            },
+            {
+               "carrierName":"Shipt",
+               "cutOffTime":"5",
+               "smartWindowEligible":false
+            }
+         ],
+         "prefferedCarrier":null,
+         "sites":[
+            "BedBathUS"
+         ]
       },
-      "pickupQuantity":2,
-      "totalAvailableQty":4,
-      "productLocation":{
-         "bay":"DESK",
-         "aisle":"13"
-      }
-   },
-   "ratings":{
-      "1001181690":{
-         "rating":"4.5",
-         "reviewCount":"21"
-      }
-   },
-   "associatedServices":{
-
-   },
-   "siteDetails":{
-      "site":"LOWES",
-      "isSignIn":false,
-      "userSegmentData":{
-
+      "eventDetails":null,
+      "sddAndBOPISinfo":{
+         "storeId":"316",
+         "storeEnabled":"Y",
+         "sddCutOffTime":"1 PM",
+         "bopisCutOffTime":"7 PM",
+         "sddBeforeCutOffMsg":"Order by 1 PM, get it today",
+         "sddAfterCutOffMsg":"Order after 1 PM, get it tomorrow.",
+         "bopisBeforeCutOffMsg":"Ready in 1 hour",
+         "bopisAfterCutOffMsg":"Ready tomorrow for pickup",
+         "sddDisplayMsgFirst":"Order after 1 PM",
+         "sddDisplayMsgLast":" get it tomorrow.",
+         "bopisDisplayMsg":"Ready in 1 hour",
+         "plpbopisDisplayMsg":"Ready in 1 hour",
+         "pdpbopisDisplayMsg":"Ready in 1 hour. Free curbside pickup!",
+         "sunOpen":"1000",
+         "sunClose":"1900",
+         "monOpen":"1000",
+         "monClose":"2000",
+         "tuesOpen":"1000",
+         "tuesClose":"2000",
+         "wedOpen":"1000",
+         "wedClose":"2000",
+         "thursOpen":"1000",
+         "thursClose":"2000",
+         "friOpen":"1000",
+         "friClose":"2000",
+         "satOpen":"1000",
+         "satClose":"2100",
+         "timeZoneId":"America/New_York",
+         "timediff":"SDD Diff: -136 BOPIS Diff: 464",
+         "currentTime":"1436"
       },
-      "organizationData":{
-
-      }
+      "currentDateTime":"2022-10-20T18:36:52.223+00:00"
    },
-   "storeDetails":{
-      "zip":"06416",
-      "address":"90 Berlin Road",
-      "storeHours":[
-         {
-            "day":{
-               "day":"Thursday",
-               "open":"06.00.00",
-               "close":"22.00.00"
-            }
-         },
-         {
-            "day":{
-               "day":"Friday",
-               "open":"06.00.00",
-               "close":"22.00.00"
-            }
-         },
-         {
-            "day":{
-               "day":"Saturday",
-               "open":"06.00.00",
-               "close":"22.00.00"
-            }
-         },
-         {
-            "day":{
-               "day":"Sunday",
-               "open":"07.00.00",
-               "close":"20.00.00"
-            }
-         },
-         {
-            "day":{
-               "day":"Monday",
-               "open":"06.00.00",
-               "close":"22.00.00"
-            }
-         },
-         {
-            "day":{
-               "day":"Tuesday",
-               "open":"06.00.00",
-               "close":"22.00.00"
-            }
-         },
-         {
-            "day":{
-               "day":"Wednesday",
-               "open":"06.00.00",
-               "close":"22.00.00"
-            }
-         }
-      ],
-      "city":"Cromwell",
-      "bisName":"LOWE'S OF CROMWELL, CT",
-      "phone":"(860) 894-3800",
-      "storeName":"Cromwell Lowe's",
-      "id":"2383",
-      "fax":"(860) 894-3801",
-      "proServicesDesk":"(860) 894-3829",
-      "proFax":"(860) 894-3803",
-      "lat":"41.603597",
-      "timeZone":"America/New_York",
-      "storeDescription":"For those in the Cromwell, CT area looking to improve their home, your community Lowe's is here to help. Whether you're looking for patio furniture, major appliances, paint or something in between, you can find it at the Cromwell Lowe's. At Lowe's, we're not just a home improvement store, we work to be a part of your community and help everyone love where they live. Plus, we also offer a wide variety of other home items and services, making us your true one-stop shop for home improvement. If you have any questions or need help, our helpful red vest staff members are always around. See you soon!",
-      "storeFeature":"Garden Center,Truck Rental,Key Copy,Dog-Friendly",
-      "corpNumber":"29",
-      "areaNumber":"1373",
-      "regionNumber":"30",
-      "storeType":"1",
-      "storeStatusCd":"1",
-      "openDate":"2009-10-02",
-      "country":"US",
-      "long":"-72.697297",
-      "state":"CT",
-      "zipCode":"06416",
-      "storeNumber":"2383"
-   }
+   "traceId":"91c3768249c3630e",
+   "spanId":"-7943375015796055282",
+   "requestReceivedTime":"2022-10-20T18:36:52.196750987Z",
+   "responseSentTime":"2022-10-20T18:36:52.232208079Z",
+   "reqReadableTime":"20-Oct-2022 18:36:52:196",
+   "respReadableTime":"20-Oct-2022 18:36:52:232",
+   "pageSize":1,
+   "pageFrom":1,
+   "pageTo":1
 }

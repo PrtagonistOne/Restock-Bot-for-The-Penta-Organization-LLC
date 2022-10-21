@@ -6,50 +6,50 @@ from config.loggers import get_core_logger
 import uuid
 
 from utils.home_depot_handlers import get_hd_shipment_status
+from utils.lowes_handlers import get_lowes_shipment_status
 
 init_logging()
 logger = get_core_logger()
 
 
-def add_to_catalog(update, context):
+def connection_cursor():
+    # Connecting to the SQL database
+    conn = sqlite3.connect('list.db')
+    return conn.cursor(), conn
+
+
+def table_init_check():
+    c, conn = connection_cursor()
+    c.execute('''CREATE TABLE IF NOT EXISTS Catalog
+                          (Retailer_name TEXT, Product_name TEXT, Location TEXT, Stock_status TEXT,
+                          Shipping_details TEXT, Unique_Id TEXT)''')
+    conn.commit()
+    conn.close()
+
+
+def create_entry_query(retailer, product, location, in_stock, shipping, id):
+    c, conn = connection_cursor()
+    c.execute("INSERT INTO Catalog VALUES(?,?,?,?,?,?)", (retailer, product, location, in_stock, shipping,
+                                                          id.replace('-', '')))
+    conn.commit()
+    conn.close()
+
+
+def add_HD_to_catalog(update, context):
     logger.info('Catalog add db request')
-    context.bot.send_message(chat_id=update.message.chat_id, text="Adding a product..")
+    context.bot.send_message(chat_id=update.message.chat_id, text="Adding a product for Home Depot..")
 
     strings = update.message.text.lower().split()
-    table_entry_data = []
     logger.info(f'Message info: {strings}')
 
-    if len(strings) == 4:
-        strings.remove('/add_to_catalog')
-
-        if strings[2] == 'hd':
-            table_entry_data = get_hd_shipment_status(strings[0], strings[1])
-
+    if len(strings) >= 2:
+        strings.remove('/add_HD_to_catalog')
         logger.info(f'Message info: {strings}')
 
-        ret_name = table_entry_data[0]
-        prod_name = table_entry_data[1]
-        location = table_entry_data[2]
-        in_stock = table_entry_data[3]
-        shipping = table_entry_data[4]
-        logger.info(f'Message info: {strings}')
-        # Connecting to the SQL database
-        conn = sqlite3.connect('list.db')
-        c = conn.cursor()
-
-        c.execute('''CREATE TABLE IF NOT EXISTS Catalog
-                      (Retailer_name TEXT, Product_name TEXT, Location TEXT, Stock_status TEXT,
-                      Shipping_details TEXT, Unique_Id TEXT)''')
-
-        conn.commit()
-
+        ret_name, prod_name, location, in_stock, shipping = get_hd_shipment_status(strings[0], strings[1])
         unique_id = str(uuid.uuid4())
 
-        c.execute("INSERT INTO Catalog VALUES(?,?,?,?,?,?)", (ret_name, strings[0], location, in_stock, shipping,
-                                                              unique_id.replace('-', '')))
-
-        conn.commit()
-        conn.close()
+        create_entry_query(ret_name, prod_name, location, in_stock, shipping, unique_id)
 
         update.message.reply_text("A product was added to the catalog.")
     else:
