@@ -2,35 +2,54 @@ import sqlite3
 
 from config.init_logging import init_logging
 from config.loggers import get_core_logger
+import datetime
 
 import uuid
 
-from utils.home_depot_handlers import get_hd_shipment_status
-from utils.lowes_handlers import get_lowes_shipment_status
+from utils.retailer_utils.home_depot_handlers import get_hd_shipment_status
 
 init_logging()
 logger = get_core_logger()
 
 
-def connection_cursor():
+def cursor_connection():
     # Connecting to the SQL database
     conn = sqlite3.connect('list.db')
     return conn.cursor(), conn
 
 
 def table_init_check():
-    c, conn = connection_cursor()
+    c, conn = cursor_connection()
     c.execute('''CREATE TABLE IF NOT EXISTS Catalog
-                          (Retailer_name TEXT, Product_name TEXT, Location TEXT, Stock_status TEXT,
-                          Shipping_details TEXT, Unique_Id TEXT)''')
+                              (Retailer_name TEXT, Product_name TEXT, Location TEXT, Stock_status TEXT,
+                              Shipping_details TEXT, Unique_Id TEXT, Date_Created timestamp)''')
     conn.commit()
     conn.close()
 
 
-def create_entry_query(retailer, product, location, in_stock, shipping, id):
-    c, conn = connection_cursor()
-    c.execute("INSERT INTO Catalog VALUES(?,?,?,?,?,?)", (retailer, product, location, in_stock, shipping,
-                                                          id.replace('-', '')))
+def check_for_the_same_entry(product, zip, c):
+    query = f"""SELECT COUNT(*)
+                FROM Catalog
+                WHERE Product_name IN ('{product}')
+                and Location in ('{zip}')"""
+
+    flag = c.execute(query).fetchall()[0][0]
+    return flag == 0
+
+
+def create_entry_query(retailer, product, location, in_stock, shipping, id: str = str(uuid.uuid4())):
+    table_init_check()
+    c, conn = cursor_connection()
+    c.execute("INSERT INTO Catalog VALUES(?,?,?,?,?,?,?)", (retailer, product, location, in_stock, shipping,
+                                                            id.replace('-', ''), datetime.datetime.now()))
+    conn.commit()
+    conn.close()
+
+
+def delete_all_entries():
+    c, conn = cursor_connection()
+    c.execute("DELETE FROM Catalog")
+
     conn.commit()
     conn.close()
 
@@ -43,15 +62,18 @@ def add_HD_to_catalog(update, context):
     logger.info(f'Message info: {strings}')
 
     if len(strings) >= 2:
-        strings.remove('/add_HD_to_catalog')
+        strings.remove('/add_hd_to_catalog')
         logger.info(f'Message info: {strings}')
 
-        ret_name, prod_name, location, in_stock, shipping = get_hd_shipment_status(strings[0], strings[1])
-        unique_id = str(uuid.uuid4())
+        c, _ = cursor_connection()
+        if check_for_the_same_entry(strings[0], strings[1], c):
+            ret_name, prod_name, location, in_stock, shipping = get_hd_shipment_status(strings[0], strings[1])
 
-        create_entry_query(ret_name, prod_name, location, in_stock, shipping, unique_id)
+            create_entry_query(ret_name, prod_name, location, in_stock, shipping)
 
-        update.message.reply_text("A product was added to the catalog.")
+            update.message.reply_text("A product was added to the catalog.")
+        else:
+            update.message.reply_text("This item already added.")
     else:
         update.message.reply_text("Syntax error. Press /help for more info")
 
@@ -59,19 +81,16 @@ def add_HD_to_catalog(update, context):
 def clear_list(update, context):
     logger.info('Catalog remove all db request')
     context.bot.send_message(chat_id=update.message.chat_id, text="Removing all products..")
+    strings = update.message.text.lower().split()
 
-    # Connecting to the SQL database
-    conn = sqlite3.connect('list.db')
-    c = conn.cursor()
+    if len(strings) == 2 and strings[1] == '!!!':
+        # Connecting to the SQL database
 
-    report = "❗Report\n✔️ Items successfully deleted from the catalog.\n"
-
-    c.execute("DELETE FROM Catalog")
-
-    conn.commit()
-    conn.close()
-
-    update.message.reply_text(report)
+        report = "❗Report\n✔️ Items successfully deleted from the catalog.\n"
+        delete_all_entries()
+        update.message.reply_text(report)
+    else:
+        update.message.reply_text("Syntax error. Press /help for more info")
 
 
 def show_list(update, context):
@@ -88,9 +107,10 @@ def show_list(update, context):
     if len(rows) > 0:
         logger.info(rows)
         for row in rows:
-            update.message.reply_text(f"RETAILER - {row[0]},\nPRODUCT - {row[1]}\n"
-                                      f"LOCATION - {row[2]},\nSTOCK - {row[3]}\n"
-                                      f"Type of Shipping - {row[4]},\n ID - {row[5]}")
+            update.message.reply_text(f"RETAILER - {row[0]}\nPRODUCT - {row[1]}\n"
+                                      f"LOCATION - {row[2]}\nSTOCK - {row[3]}\n"
+                                      f"Type of Shipping - {row[4]}\nTIME ADDED - {row[6]}"
+                                      f"\nID - {row[5]}\n")
     else:
         update.message.reply_text("No items in the catalog.")
 

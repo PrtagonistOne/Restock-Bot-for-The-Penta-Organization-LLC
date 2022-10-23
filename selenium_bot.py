@@ -1,53 +1,58 @@
-import time
 import random
+import time
 
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.common.exceptions import ElementNotInteractableException
 
+url = 'https://www.homedepot.com/p/Zenith-Stereo-Earbuds-with-Microphone-in-Blue-PM1001SEB2/305896604'
 
-
-url = 'https://www.homedepot.com/p/ISOtunes-PRO-Bluetooth-Hearing-Protection-Earbuds-27-dB-Noise-Reduction-Rating' \
-      '-OSHA-Compliant-Ear-Protection-for-Work-Orange-IT-01/301358859 '
 service = Service(executable_path=ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service)
+
+time_range = 2
 driver.get('https://www.google.com')
+driver.maximize_window()
 time.sleep(random.randint(0, 3))
 driver.get(url)
 
-time.sleep(random.randint(1, 4))
-try:
-    # Ship to home Button
-    shippint_status = driver.find_element(By.XPATH, '/html/body/div[4]/div/div[3]/div/div/div[3]/div/div/div[10]'
-                                                     '/div/div/div[1]/div/div[2]/a[2]/div/div[2]').text
-    if shippint_status == 'Not available for this item':
-        print('Home shipping not available for this item')
-    driver.find_element(By.XPATH, '/html/body/div[4]/div/div[3]/div/div/div[3]/div/div/div[10]/div/div/div['
-                                  '1]/div/div[2]/a[2]').click()
-except Exception:
-    print('Only home delivery (not shipping) for this item!')
 
-time.sleep(random.randint(2, 5))
-# clicking on the delivery change button
-driver.find_element(By.XPATH,
-                    '/html/body/div[4]/div/div[3]/div/div/div[3]/div/div/div[10]/div/div/div[1]/div/div[1]/span/span['
-                    '2]/button').click()
+def change_address(driver, location, time_range):
+    while True:
+        try:
+            driver.find_element(By.CLASS_NAME, 'DeliveryZipInline__button').click()
+            time.sleep(time_range)
+            # Inputting new address and updating it
+            driver.find_element(By.ID, 'deliveryZipInput').send_keys(f'{location}')
+            time.sleep(time_range)
+            driver.find_element(By.ID, 'deliveryZipUpdateButton').click()
+            time.sleep(time_range)
+        except ElementNotInteractableException:
+            print('')
+        else:
+            return 'Changed Address successfully!'
 
-# Inputting the zip code
-time.sleep(random.randint(3, 6))
-driver.find_element(By.XPATH, '/html/body/div[4]/div/div[3]/div/div/div[3]/div/div/div[10]/div/div/div[1]/div/div['
-                              '2]/div/div/div/div/div[2]/form/div[1]/span/input').clear()
-driver.find_element(By.XPATH, '/html/body/div[4]/div/div[3]/div/div/div[3]/div/div/div[10]/div/div/div[1]/div/div['
-                              '2]/div/div/div/div/div[2]/form/div[1]/span/input').send_keys('19713')
-# Clicking update address
-time.sleep(random.randint(4, 7))
-driver.find_element(By.XPATH, '/html/body/div[4]/div/div[3]/div/div/div[3]/div/div/div[10]/div/div/div[1]/div/div['
-                              '2]/div/div/div/div/div[2]/form/div[2]/button/span').click()
 
-# Returning delivery status
-time.sleep(random.randint(5, 8))
-print(driver.find_element(By.XPATH, '/html/body/div[4]/div/div[3]/div/div/div[3]/div/div/div[10]/div/div/div['
-                                    '1]/div/div[3]/div[1]/div/span[2]').text)
-time.sleep(random.randint(60, 600))
+print(change_address(driver, '03051', 2))
 
+while True:
+    try:
+        time.sleep(1.5)
+        elems_fullfill = driver.find_elements(By.CLASS_NAME, 'u__center')
+
+    except ElementNotInteractableException:
+        print('Checking shipping status..')
+    else:
+        delivery_status = set()
+
+        for elem in elems_fullfill:
+            for el in elem.get_attribute('class').split():
+                delivery_status.add(el)
+
+        if 'delivery-true' in delivery_status:
+            print(delivery_status, 'IT IS IN TTHE DAMN THING!!')
+        else:
+            print('Home delivery not available for this yet or Out of stock')
+            break

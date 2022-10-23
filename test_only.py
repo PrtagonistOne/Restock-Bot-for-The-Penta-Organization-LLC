@@ -39,6 +39,12 @@
 #
 #     loop.run_forever()
 #
-url = 'https://www.lowes.com/pd/Jasco-8-ft-USB-to-USB-C-Cable/1001073408'
-url = url.split('/')
-print(f'https://www.lowes.com/pd/{url[-1]}/productdetail/2383/Guest')
+# url = 'https://www.lowes.com/pd/Jasco-8-ft-USB-to-USB-C-Cable/1001073408'
+# url = url.split('/')
+# print(f'https://www.lowes.com/pd/{url[-1]}/productdetail/2383/Guest')
+from utils.db_handlers import check_for_the_same_entry
+
+check_for_the_same_entry(
+    'https://www.homedepot.com/p/skullcandy-sesh-in-ear-anc-noise-canceling-true-wireless-stereo-bluetooth-earbuds'
+    '-with-microphone-in-true-black-s2tew-p740/321137680',
+    19713)
