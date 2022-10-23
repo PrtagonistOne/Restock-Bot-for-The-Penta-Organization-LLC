@@ -72,6 +72,7 @@ def add_HD_to_catalog(update, context):
             create_entry_query(ret_name, prod_name, location, in_stock, shipping)
 
             update.message.reply_text("A product was added to the catalog.")
+            show_list(update, context)
         else:
             update.message.reply_text("This item already added.")
     else:
@@ -109,7 +110,7 @@ def show_list(update, context):
         for row in rows:
             update.message.reply_text(f"RETAILER - {row[0]}\nPRODUCT - {row[1]}\n"
                                       f"LOCATION - {row[2]}\nSTOCK - {row[3]}\n"
-                                      f"Type of Shipping - {row[4]}\nTIME ADDED - {row[6]}"
+                                      f"Type of Shipping - {row[4]}\n\nTIME ADDED - {row[6]}"
                                       f"\nID - {row[5]}\n")
     else:
         update.message.reply_text("No items in the catalog.")

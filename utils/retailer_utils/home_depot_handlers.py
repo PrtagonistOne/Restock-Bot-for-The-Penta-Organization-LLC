@@ -1,5 +1,5 @@
 import time
-import random
+from random import randint
 
 from config.init_logging import init_logging
 from config.loggers import get_core_logger
@@ -34,9 +34,8 @@ def check_if_available(driver, time_range):
         try:
             time.sleep(time_range)
             elems_fullfill = driver.find_elements(By.CLASS_NAME, 'u__center')
-
         except ElementNotInteractableException:
-            print('Checking shipping status..')
+            logger.info('Checking shipping status..')
         else:
             delivery_status = set()
 
@@ -45,39 +44,31 @@ def check_if_available(driver, time_range):
                     delivery_status.add(el)
 
             if 'delivery-true' in delivery_status:
-                print(delivery_status, 'IT IS IN TTHE DAMN THING!!')
+                return 'Ship to Home In-Stock'
             else:
-                print('Home delivery not available for this yet or Out of stock')
-                break
+                return 'Home delivery not available for this yet or Out of stock'
 
 
 def get_hd_shipment_status(url, zip):
     ret_name = 'homedepot.com'
     prod_name = url
     location = zip
+    time_range = randint(0, 3)
 
     driver = webdriver_init()
     # Starting point
-    driver.get('https://www.google.com')
-    time.sleep(random.randint(6, 15))
-
+    time.sleep(time_range)
+    # Moving to the product page
     driver.get(url)
-    time.sleep(random.randint(15, 30))
+    time.sleep(time_range)
 
-
-
-    in_stock = 'In-stock'
-    shipping = 'Ship to Home'
-    # Returning delivery status
-
-    time_range = 2
-    driver.get('https://www.google.com')
-    driver.maximize_window()
-    time.sleep(random.randint(0, 3))
-    driver.get(url)
-
+    # Changing the zip code
     logger.info(change_address(driver, location, time_range))
 
+    # Checking the stock
+    time.sleep(time_range)
+    in_stock = check_if_available(driver, time_range=time_range)
+    shipping = 'Ship to Home'
 
-
+    # Returning delivery status
     return ret_name, prod_name, location, in_stock, shipping

@@ -7,14 +7,13 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.common.exceptions import ElementNotInteractableException
 
-url = 'https://www.homedepot.com/p/Zenith-Stereo-Earbuds-with-Microphone-in-Blue-PM1001SEB2/305896604'
+url = 'https://www.homedepot.com/p/Google-Nest-Wifi-Mesh-Router-AC2200-and-1-Point-with-Google-Assistant-2-Pack-Snow-GA00822-US/311324762?MERCH=REC-_-sp-_-pip_sponsored-_-1-_-n/a-_-HDProdPage-_-n/a-_-n/a-_-n/a&ITC=AUC-133090-23-12030'
 
 service = Service(executable_path=ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service)
 
 time_range = 2
 driver.get('https://www.google.com')
-driver.maximize_window()
 time.sleep(random.randint(0, 3))
 driver.get(url)
 
@@ -30,7 +29,7 @@ def change_address(driver, location, time_range):
             driver.find_element(By.ID, 'deliveryZipUpdateButton').click()
             time.sleep(time_range)
         except ElementNotInteractableException:
-            print('')
+            print('Changing the Address')
         else:
             return 'Changed Address successfully!'
 
