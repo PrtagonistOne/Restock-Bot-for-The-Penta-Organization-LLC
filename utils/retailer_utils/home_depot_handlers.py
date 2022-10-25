@@ -13,7 +13,7 @@ init_logging()
 logger = get_core_logger()
 
 
-def change_address(driver, location, time_range):
+def change_hd_address(driver, location, time_range):
     while True:
         try:
             driver.find_element(By.CLASS_NAME, 'DeliveryZipInline__button').click()
@@ -29,7 +29,7 @@ def change_address(driver, location, time_range):
             return 'Changed Address successfully!'
 
 
-def check_if_available(driver, time_range):
+def check_hd_if_available(driver, time_range):
     while True:
         try:
             time.sleep(time_range)
@@ -63,12 +63,15 @@ def get_hd_shipment_status(url, zip):
     time.sleep(time_range)
 
     # Changing the zip code
-    logger.info(change_address(driver, location, time_range))
+    logger.info(change_hd_address(driver, location, time_range))
 
     # Checking the stock
     time.sleep(time_range)
-    in_stock = check_if_available(driver, time_range=time_range)
+    in_stock = check_hd_if_available(driver, time_range=time_range)
     shipping = 'Ship to Home'
+
+    driver.close()
+    driver.quit()
 
     # Returning delivery status
     return ret_name, prod_name, location, in_stock, shipping
