@@ -6,6 +6,7 @@ import datetime
 
 import uuid
 
+from utils.retailer_utils.BBB_handlers import get_bbb_shipment_status
 from utils.retailer_utils.home_depot_handlers import get_hd_shipment_status
 
 init_logging()
@@ -68,6 +69,31 @@ def add_HD_to_catalog(update, context):
         c, _ = cursor_connection()
         if check_for_the_same_entry(strings[0], strings[1], c):
             ret_name, prod_name, location, in_stock, shipping = get_hd_shipment_status(strings[0], strings[1])
+
+            create_entry_query(ret_name, prod_name, location, in_stock, shipping)
+
+            update.message.reply_text("A product was added to the catalog.")
+            show_list(update, context)
+        else:
+            update.message.reply_text("This item already added.")
+    else:
+        update.message.reply_text("Syntax error. Press /help for more info")
+
+
+def add_bbb_to_catalog(update, context):
+    logger.info('Catalog add db request')
+    context.bot.send_message(chat_id=update.message.chat_id, text="Adding a product for Bed Bath and Beyond..")
+
+    strings = update.message.text.lower().split()
+    logger.info(f'Message info: {strings}')
+
+    if len(strings) >= 2:
+        strings.remove('/add_bbb_to_catalog')
+        logger.info(f'Message info: {strings}')
+
+        c, _ = cursor_connection()
+        if check_for_the_same_entry(strings[0], strings[1], c):
+            ret_name, prod_name, location, in_stock, shipping = get_bbb_shipment_status(strings[0], strings[1])
 
             create_entry_query(ret_name, prod_name, location, in_stock, shipping)
 

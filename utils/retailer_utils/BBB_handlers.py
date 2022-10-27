@@ -11,6 +11,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.common.exceptions import ElementNotInteractableException, NoSuchElementException, \
     StaleElementReferenceException
 
+from utils.selenium_utils.Selenium_browser_handler import webdriver_init
+
 init_logging()
 logger = get_core_logger()
 
@@ -91,13 +93,7 @@ def get_bbb_shipment_status(url, zip):
     prod_name = url
     location = zip
 
-    options = webdriver.ChromeOptions()
-    options.add_argument("start-maximized")
-    options.add_experimental_option("excludeSwitches", ["enable-automation"])
-    options.add_experimental_option('useAutomationExtension', False)
-
-    service = Service(executable_path=ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=service, options=options)
+    driver = webdriver_init()
 
     time_range = randint(3, 6)
     driver.get('https://www.google.com')
