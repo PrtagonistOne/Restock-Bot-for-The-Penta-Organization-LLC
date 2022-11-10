@@ -44,7 +44,7 @@ def check_hd_if_available(driver, time_range):
                     delivery_status.add(el)
 
             if 'delivery-true' in delivery_status:
-                return 'Ship to Home In-Stock'
+                return 'Ship to Home - In-Stock'
             else:
                 return 'Home delivery not available for this yet or Out of stock'
 
@@ -53,7 +53,7 @@ def get_hd_shipment_status(url, zip):
     ret_name = 'homedepot.com'
     prod_name = url
     location = zip
-    time_range = randint(0, 3)
+    time_range = randint(3, 6)
 
     driver = webdriver_init()
     # Starting point
@@ -68,6 +68,8 @@ def get_hd_shipment_status(url, zip):
     # Checking the stock
     time.sleep(time_range)
     in_stock = check_hd_if_available(driver, time_range=time_range)
+    time.sleep(time_range)
+
     shipping = 'Ship to Home'
 
     driver.close()

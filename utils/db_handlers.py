@@ -38,14 +38,17 @@ def check_for_the_same_entry(product, zip, c):
     return flag == 0
 
 
-def create_entry_query(retailer, product, location, in_stock, shipping, id: str = str(uuid.uuid4())):
+def create_entry_query(retailer, product, location, in_stock, shipping, product_id: str = None):
+    if product_id is None:
+        product_id = str(uuid.uuid4()).replace('-', '')
+
     table_init_check()
     c, conn = cursor_connection()
     c.execute("INSERT INTO Catalog VALUES(?,?,?,?,?,?,?)", (retailer, product, location, in_stock, shipping,
-                                                            id.replace('-', ''), datetime.datetime.now()))
+                                                            product_id, datetime.datetime.now()))
     conn.commit()
     conn.close()
-
+    return product_id
 
 def delete_all_entries():
     c, conn = cursor_connection()
@@ -70,10 +73,10 @@ def add_HD_to_catalog(update, context):
         if check_for_the_same_entry(strings[0], strings[1], c):
             ret_name, prod_name, location, in_stock, shipping = get_hd_shipment_status(strings[0], strings[1])
 
-            create_entry_query(ret_name, prod_name, location, in_stock, shipping)
+            product_id = create_entry_query(ret_name, prod_name, location, in_stock, shipping)
 
             update.message.reply_text("A product was added to the catalog.")
-            show_list(update, context)
+            show_one_record(update, context, product_id)
         else:
             update.message.reply_text("This item already added.")
     else:
@@ -95,10 +98,10 @@ def add_bbb_to_catalog(update, context):
         if check_for_the_same_entry(strings[0], strings[1], c):
             ret_name, prod_name, location, in_stock, shipping = get_bbb_shipment_status(strings[0], strings[1])
 
-            create_entry_query(ret_name, prod_name, location, in_stock, shipping)
+            product_id = create_entry_query(ret_name, prod_name, location, in_stock, shipping)
 
             update.message.reply_text("A product was added to the catalog.")
-            show_list(update, context)
+            show_one_record(update, context, product_id)
         else:
             update.message.reply_text("This item already added.")
     else:
@@ -118,6 +121,24 @@ def clear_list(update, context):
         update.message.reply_text(report)
     else:
         update.message.reply_text("Syntax error. Press /help for more info")
+
+
+def show_one_record(update, context, product_id):
+    logger.info('Catalog shows added product')
+    context.bot.send_message(chat_id=update.message.chat_id, text="Showing added product..")
+
+    # Connecting to the SQL database
+    c, conn = cursor_connection()
+
+    c.execute("SELECT * FROM Catalog WHERE Unique_Id=?", (product_id,))
+
+    row = c.fetchall()[0]
+    conn.close()
+
+    update.message.reply_text(f"RETAILER - {row[0]}\nPRODUCT - {row[1]}\n"
+                              f"LOCATION - {row[2]}\nSTOCK - {row[3]}\n"
+                              f"Type of Shipping - {row[4]}\n\nTIME ADDED - {row[6]}"
+                              f"\nID - {row[5]}\n")
 
 
 def show_list(update, context):

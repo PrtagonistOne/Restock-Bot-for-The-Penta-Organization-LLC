@@ -4,12 +4,10 @@ from random import randint
 from config.init_logging import init_logging
 from config.loggers import get_core_logger
 
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
-from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.support.wait import WebDriverWait
 from selenium.common.exceptions import ElementNotInteractableException, NoSuchElementException, \
-    StaleElementReferenceException
+    StaleElementReferenceException, JavascriptException
 
 from utils.selenium_utils.Selenium_browser_handler import webdriver_init
 
@@ -17,22 +15,36 @@ init_logging()
 logger = get_core_logger()
 
 
-def change_bbb_address(driver, location, url, time_range):
+def button_click(driver):
+    return not driver.execute_script("return document.querySelector('#formSection > div > label').click()")
+
+
+def shadow_root_two(driver):
+    while True:
+        try:
+            return driver.execute_script(
+                f"return document.querySelector('#wmHostPdp').shadowRoot.querySelector('#prod3FulfillmentList{product_id} > div.i-amphtml-fill-content.i-amphtml-replaced-content > div > div > div.lineH12 > div > div.bopisFulfill > div > div:nth-child(1) > a')")
+        except JavascriptException:
+            driver.refresh()
+            time.sleep(6)
+
+
+def change_bbb_address(driver, location, url, time_range, product_id):
     # changing address
     while True:
         try:
             time.sleep(time_range)
             # selecting change address button
-            product_id = url.split('/')[-1][:7]
-            change_zip_code = driver.execute_script(
-                f"return document.querySelector('#wmHostPdp').shadowRoot.querySelector('#prod3FulfillmentList{product_id} > "
-                "div.i-amphtml-fill-content.i-amphtml-replaced-content > div > div > div.lineH12 > div > div.shipFulfill "
-                "> div > div > a')")
+
+
             time.sleep(time_range)
-            # when the ship to home is not available by default
-            if change_zip_code is None:
-                change_zip_code = driver.execute_script(
-                    f"return document.querySelector('#wmHostPdp').shadowRoot.querySelector('#prod3FulfillmentList{product_id} > div.i-amphtml-fill-content.i-amphtml-replaced-content > div > div > div.lineH12 > div > div.bopisFulfill > div > div:nth-child(1) > a')")
+
+            # driver.refresh()
+            change_zip_code = driver.execute_script(
+                f"return document.querySelector('#wmHostPdp').shadowRoot.querySelector('#prod3FulfillmentList{product_id} > div.i-amphtml-fill-content.i-amphtml-replaced-content > div > div > div.lineH12 > div > div.shipFulfill > div > div > a')")
+
+            time.sleep(time_range)
+
 
             # selecting change address button
             delivery_options_href = change_zip_code.get_attribute('href')
@@ -40,7 +52,7 @@ def change_bbb_address(driver, location, url, time_range):
             driver.get(delivery_options_href)
             time.sleep(time_range)
             # clicking on the change zip code button
-            driver.execute_script("return document.querySelector('#formSection > div > label').click()")
+            WebDriverWait(driver, timeout=60).until(button_click)
 
             time.sleep(time_range)
 
@@ -76,6 +88,7 @@ def change_bbb_address(driver, location, url, time_range):
 def check_bbb_if_available(driver, time_range):
     time.sleep(time_range)
     # Checking Ship to Home Status
+
     shipping_status = driver.execute_script(
         "return document.querySelector('#wmHostPdp').shadowRoot.querySelector('#fullfillSelector > div > "
         "div:nth-child(3)').textContent")
@@ -89,21 +102,22 @@ def check_bbb_if_available(driver, time_range):
 
 
 def get_bbb_shipment_status(url, zip):
-    ret_name = 'homedepot.com'
+    ret_name = 'bedbathandbeyond.com'
     prod_name = url
     location = zip
 
     driver = webdriver_init()
 
     time_range = randint(3, 6)
-    driver.get('https://www.google.com')
-
+    time.sleep(time_range)
     driver.get(url)
     time.sleep(time_range)
 
     change_bbb_address(driver=driver, location=location, url=url, time_range=time_range)
+    time.sleep(time_range)
 
     in_stock = check_bbb_if_available(driver, time_range=time_range)
+
     shipping = 'Ship to Home'
 
     driver.close()
